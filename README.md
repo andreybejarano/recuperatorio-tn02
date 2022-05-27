@@ -29,7 +29,7 @@ npm run migrate
 ```
 
 ## Correr el proyecto
-Para correr el proyecto deben correr en una terminal los siguiente:
+Para correr el proyecto deben correr en una terminal lo siguiente:
 ``` shell
 npm run dev
 ```
