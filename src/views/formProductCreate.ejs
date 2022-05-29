@@ -17,8 +17,12 @@
             <input type="number" name="price" id="price">
             <label for="category">Tipo de producto: </label>
             <select name="category" id="category">
-                <option value="electrodomestico">Electrodomestico</option>
-                <option value="accesorios">Accesorios</option>
+                <% for(let i = 0; i < products.lenght; i++) { %>    
+                    <!--Electrodomesticos y Accsesorios-->
+                <option value="<%=products[i].id%>">
+                    <%=products[i].name%> 
+                </option>
+                <% } %> 
             </select>
         </form>
 </body>

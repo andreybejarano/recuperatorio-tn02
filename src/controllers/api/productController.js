@@ -12,7 +12,11 @@ const controller = {
         })
     },
     create: (req, res) => {
-        res.render('formProductCreate');
+        db.Product.findAll()
+        .then((products) =>{
+            res.render('formProductCreate', {products});
+        })
+        
     },
     store: (req, res) => {
         const ProductToCreate = {
