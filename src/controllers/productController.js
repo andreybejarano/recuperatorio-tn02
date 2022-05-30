@@ -3,7 +3,11 @@ const db = require('../database/models');
 
 const controller = {
     create: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll(
+            {
+                include:[{assosiation: ProductCategory}]
+            }
+        )
         .then((products) =>{
             res.render('formProductCreate', {products});
         })
