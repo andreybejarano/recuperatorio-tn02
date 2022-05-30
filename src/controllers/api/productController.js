@@ -10,28 +10,6 @@ const controller = {
         }).catch(err => {
             res.json(err);
         })
-    },
-    create: (req, res) => {
-        db.Product.findAll()
-        .then((products) =>{
-            res.render('formProductCreate', {products});
-        })
-        
-    },
-    store: (req, res) => {
-        const ProductToCreate = {
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            category: req.body.category
-        };
-        db.Product.create(ProductToCreate)
-        .then(response => {
-            res.redirect('/');
-        })
-        .catch(err => {
-            res.send(err);
-        })
     }
 }
 
