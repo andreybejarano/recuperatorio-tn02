@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Product_categorie'
+    let Product = 'Product_categorie'
     let cols = {
         id:{
             autoIncrement: true,
@@ -10,25 +10,26 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:false,
             type: DataTypes.STRING,
         },
-        email: {
+        description:{
             allowNull: false,
             type: DataTypes.STRING
         },
-        password: {
-            allowNull: false,
-            type:DataTypes.STRING
+        price:{
+            allowNull:false,
+            type: DataTypes.INTEGER
         },
-        roles_id: {
+        product_categories_id:{
+            allowNull:false,
             type: DataTypes.INTEGER
         }
     };
 
     let config = {
-        tableName: 'product_categories',
+        tableName: 'products',
         timestamps: false
     }
 
-    const Product_categories = sequelize.define(alias, cols, config);
+    const Products = sequelize.define(Product, cols, config);
 
-    return Product_categories;
+    return Products;
 }
