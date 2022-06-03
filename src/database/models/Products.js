@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let Product = 'Product_categorie'
+    let Product = 'Product'
     let cols = {
         id:{
             autoIncrement: true,
